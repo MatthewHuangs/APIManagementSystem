@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <title>Postman</title>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#get_postman").click(function () {
+                // var url = "http://52.196.121.251/postman.json";
+                $("#result_postman").html("{\n" +
+                    "  \"info\" : {\n" +
+                    "    \"_postman_id\" : \"4c231ca1-9fdd-41d9-afb4-3c3a947eb320\",\n" +
+                    "    \"name\" : \"华为API生态管理系统\",\n" +
+                    "    \"description\" : \"基于Swagger2的API查看、测试、代码生成于一体的API管理系统\",\n" +
+                    "    \"schema\" : \"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\"\n" +
+                    "  },\n" +
+                    "  \"item\" : [ {\n" +
+                    "    \"name\" : \"json-converts\",\n" +
+                    "    \"item\" : [ {\n" +
+                    "      \"name\" : \"serializeToPostmanJson\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"POST\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/jsonconvert?jsonStr={{jsonStr}}\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"jsonconvert\" ],\n" +
+                    "          \"query\" : [ {\n" +
+                    "            \"key\" : \"jsonStr\",\n" +
+                    "            \"value\" : \"{{jsonStr}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : null\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    } ],\n" +
+                    "    \"description\" : \"Folders for json-converts\"\n" +
+                    "  }, {\n" +
+                    "    \"name\" : \"users\",\n" +
+                    "    \"item\" : [ {\n" +
+                    "      \"name\" : \"创建用户\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"POST\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/users?id={{id}}&name={{name}}&age={{age}}&accessToken={{accessToken}}\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"users\" ],\n" +
+                    "          \"query\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"name\",\n" +
+                    "            \"value\" : \"{{name}}\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"age\",\n" +
+                    "            \"value\" : \"{{age}}\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"accessToken\",\n" +
+                    "            \"value\" : \"{{accessToken}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据user对象创建用户\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"获取用户列表\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"GET\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/users\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"users\" ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"直接查看当前所有用户列表\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"获取用户详情\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"GET\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/users/:id\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"users\", \":id\" ],\n" +
+                    "          \"variable\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据url的id来获取用户基本信息\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"删除用户\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"DELETE\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/users/:id\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"users\", \":id\" ],\n" +
+                    "          \"variable\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据url的id来指定对象，进行用户信息删除\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"更新用户信息\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"PUT\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/users/:id?name=\\\"null\\\"&age=0&accessToken=\\\"null\\\"\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"users\", \":id\" ],\n" +
+                    "          \"query\" : [ {\n" +
+                    "            \"key\" : \"name\",\n" +
+                    "            \"value\" : \"\\\"null\\\"\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"age\",\n" +
+                    "            \"value\" : \"0\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"accessToken\",\n" +
+                    "            \"value\" : \"\\\"null\\\"\"\n" +
+                    "          } ],\n" +
+                    "          \"variable\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据id来指定对象，并且根据需求进行用户基本信息更新，无需更新的信息保持默认值即可\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    } ],\n" +
+                    "    \"description\" : \"Folders for users\"\n" +
+                    "  }, {\n" +
+                    "    \"name\" : \"services\",\n" +
+                    "    \"item\" : [ {\n" +
+                    "      \"name\" : \"创建服务\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"POST\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/services?id={{id}}&name={{name}}&type={{type}}&time={{time}}\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"services\" ],\n" +
+                    "          \"query\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"name\",\n" +
+                    "            \"value\" : \"{{name}}\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"type\",\n" +
+                    "            \"value\" : \"{{type}}\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"time\",\n" +
+                    "            \"value\" : \"{{time}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据Service对象属性创建用户\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"获取服务列表\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"GET\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/services\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"services\" ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"直接查看当前所有服务列表\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"获取服务详情\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"GET\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/services/:id\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"services\", \":id\" ],\n" +
+                    "          \"variable\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据url的id来获取服务基本信息\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"删除服务\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"DELETE\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/services/:id\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"services\", \":id\" ],\n" +
+                    "          \"variable\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据url的id来指定对象，进行服务信息删除\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    }, {\n" +
+                    "      \"name\" : \"更新服务信息\",\n" +
+                    "      \"request\" : {\n" +
+                    "        \"method\" : \"PUT\",\n" +
+                    "        \"header\" : [ {\n" +
+                    "          \"key\" : \"Accept\",\n" +
+                    "          \"value\" : \"*/*\"\n" +
+                    "        }, {\n" +
+                    "          \"key\" : \"ContentType\",\n" +
+                    "          \"value\" : \"application/json\"\n" +
+                    "        } ],\n" +
+                    "        \"body\" : {\n" +
+                    "          \"mode\" : \"raw\",\n" +
+                    "          \"raw\" : \"\"\n" +
+                    "        },\n" +
+                    "        \"url\" : {\n" +
+                    "          \"raw\" : \"http://localhost:8889/services/:id?name=\\\"null\\\"&type=\\\"null\\\"&time=-1\",\n" +
+                    "          \"protocol\" : \"http\",\n" +
+                    "          \"host\" : [ \"localhost\" ],\n" +
+                    "          \"port\" : \"8889\",\n" +
+                    "          \"path\" : [ \"services\", \":id\" ],\n" +
+                    "          \"query\" : [ {\n" +
+                    "            \"key\" : \"name\",\n" +
+                    "            \"value\" : \"\\\"null\\\"\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"type\",\n" +
+                    "            \"value\" : \"\\\"null\\\"\"\n" +
+                    "          }, {\n" +
+                    "            \"key\" : \"time\",\n" +
+                    "            \"value\" : \"-1\"\n" +
+                    "          } ],\n" +
+                    "          \"variable\" : [ {\n" +
+                    "            \"key\" : \"id\",\n" +
+                    "            \"value\" : \"{{id}}\"\n" +
+                    "          } ]\n" +
+                    "        },\n" +
+                    "        \"description\" : \"根据id来指定对象，并且根据需求进行服务基本信息更新，无需更新的信息保持默认值即可\"\n" +
+                    "      },\n" +
+                    "      \"response\" : [ ]\n" +
+                    "    } ],\n" +
+                    "    \"description\" : \"Folders for services\"\n" +
+                    "  } ]\n" +
+                    "}"); //val()
+            });
+            return false;
+        });
+    </script>
+</head>
+
+<body>
+    <div style="vertical-align: middle;text-align: center;">
+        <div>
+            <textarea style="margin-top: 50px;width: 600px; height: 200px;background-color: black;color: white">请输入需要转换的Swagger类型的json数据</textarea>
+            <br/><br/>
+        </div>
+        <button class="layui-btn" style="text-align:center;" id="get_postman">Test</button>
+        <br/><br/>
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend>Responses</legend>
+        </fieldset>
+        <div id="result_postman"></div>
+    </div>
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/docs.js"></script>
+</body>
+</html>

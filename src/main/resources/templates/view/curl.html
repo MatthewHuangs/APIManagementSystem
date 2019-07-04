@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <title>Curl</title>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#test_curl").click(function () {
+                $("#result_curl").html("curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/plain' 'http://localhost:8888/users?id=1&name=1&age=1&accessToken=1'");
+                //("curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/plain' " + "'"+ "http://localhost:8080" + "后缀");
+            });
+            return false;
+        });
+    </script>
+</head>
+
+<body>
+    <div style="vertical-align: middle;text-align: center;margin-top: 80px;">
+        <div>API:
+            <select class="layui-select layui-select-group">
+                <option value ="user">User</option>
+                <option value ="service">Service</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Method:
+            <select class="layui-select layui-select-group">
+                <option value ="post">Post</option>
+                <option value ="get">Get</option>
+                <option value ="put">Put</option>
+                <option value ="delete">Delete</option>
+            </select>
+        </div>
+        <br/>
+
+        <textarea id="result_curl" style="width: 600px; height: 80px;background-color: black;color: white"></textarea>
+        <br><br><br>
+        <button class="layui-btn" style="text-align:center;" id="test_curl">Test</button>
+    </div>
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/docs.js"></script>
+</body>
+</html>

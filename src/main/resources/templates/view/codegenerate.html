@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <title>Code Generate</title>
+</head>
+
+<body>
+<div style="vertical-align: middle;text-align: center;margin-top: 80px;">
+    <div>
+        <!--<select class="layui-select layui-select-group">-->
+            <!--<option value ="service">Service</option>-->
+            <!--<option value ="user">User</option>-->
+        <!--</select>-->
+        <br><br><button class="layui-btn" style="text-align:center;" id="codegenerate" onclick="showDownload()">生成Api JAR文件</button>
+    </div>
+
+    <div id="download" style="visibility: hidden">
+        <!--<a id="download_jar" href="javascript:;" target="_blank">点击下载api JAR文件</a>-->
+        <br><a href="http://52.196.121.251/api.jar">点击下载API JAR文件</a>
+        <br>
+        <br><br><p align="center">Java调用JAR文件示例代码：<p>
+        <br>
+        <textarea id="call_jar_example" style="width: 650px; height: 60px;background-color: black;color: white" rows="3" cols="300">
+            RestApiFactory factory=new RestApiFactory();
+            ServiceControllerApi restApi=factory.newMapperProxy(ServiceControllerApi.class);
+            System.out.println(restApi.delServiceUsingDELETE(55l,null));
+        </textarea>
+    </div>
+</div>
+<script>
+    function showDownload() {
+        var t = document.getElementById('download');
+        t.style.visibility = 'visible';
+    }
+</script>
+<script type="text/javascript" src="/static/layui/layui.js"></script>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/docs.js"></script>
+</body>
+</html>
